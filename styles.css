@@ -1,7 +1,6 @@
 html, body {
-    margin: 0px;
-    padding: 0px;
-    height: 100%;
+    margin: 10px 0px 0px 0px;
+    padding: 5px 0px 5px 0px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -15,18 +14,18 @@ html, body {
     display: grid;
     justify-content: center;
     align-content: center;
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto auto;
     background-color: #EDF2F8;
     gap: 20px;
-    grid-template-areas: 
+    grid-template-columns: 280px 280px 280px 280px;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
     'item1 item1 item2 item3'
     'item4 item5 item5 item3';
 }
 
 #grid-container > div {
-    display: flex;
-    flex-direction: column;
+    /* display: flex; */
+    /* flex-direction: column; */
     border-radius: 8px;
 }
 
@@ -34,7 +33,7 @@ html, body {
     background-color: hsl(263, 55%, 52%);
     color: white;
     grid-area: item1;
-    width: 560px;
+    /* width: 580px; */
     /* height: 260px; */
 }
 
@@ -46,7 +45,7 @@ html, body {
     color: white;
     background-color: hsl(217, 19%, 35%);
     grid-area: item2;
-    width: 280px;
+    /* width: 280px; */
     /* height: 260px; */
 }
 
@@ -58,8 +57,9 @@ html, body {
     background-color: #FFFFFF;
     color: black;
     grid-area: item3;
-    width: 280px;
     box-shadow: 20px 20px 30px rgba(122, 119, 119, 0.445);
+    /* grid-column: 1 / 4; */
+    /* width: 280px; */
     /* height: 560px; */
 }
 
@@ -70,8 +70,8 @@ html, body {
 #grid-item-4 {
     background-color: #FFFFFF;
     grid-area: item4;
-    width: 280px;
     box-shadow: 20px 20px 30px rgba(122, 119, 119, 0.445);
+    /* width: 100%; */
     /* height: 260px; */
 }
 
@@ -83,7 +83,7 @@ html, body {
     background-color: hsl(219, 29%, 14%);
     grid-area: item5;
     color: #EDF2F8;
-    width: 560px;
+    /* width: 100%; */
     /* height: 260px; */
 }
 
@@ -135,21 +135,14 @@ html, body {
 @media (max-width: 1230px) {
     #grid-container {
         padding: 20px;
-        grid-template-columns: auto auto;
-        grid-template-rows: auto auto auto auto;
+        grid-template-columns: 280px;
+        grid-template-rows: 450px 280px 500px 230px 410px;
         grid-template-areas: 
-        'item1 item1'
-        'item2 item4'
-        'item3 item3'
-        'item5 item5';
-    }
-
-    #grid-item-3, #grid-item-5 {
-        width: 580px;
-    }
-    
-    #grid-item-1, #grid-item-5 {
-        width: 580px;
+        'item1'
+        'item2'
+        'item3'
+        'item4'
+        'item5';
     }
 }
 
