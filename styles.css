@@ -9,7 +9,7 @@ html, body {
     font-family: 'Roboto', sans-serif;
 }
 
-#grid-container {
+.grid-container {
     width: 80vw;
     display: grid;
     justify-content: center;
@@ -23,13 +23,13 @@ html, body {
     'item4 item5 item5 item3';
 }
 
-#grid-container > div {
+.grid-container > div {
     /* display: flex; */
     /* flex-direction: column; */
     border-radius: 8px;
 }
 
-#grid-item-1 {
+.grid-item-1 {
     background-color: hsl(263, 55%, 52%);
     color: white;
     grid-area: item1;
@@ -37,11 +37,11 @@ html, body {
     /* height: 260px; */
 }
 
-#grid-item-1 #description-2, #verif_Grad{
+.grid-item-1 .description-2, verif_Grad{
     color: rgba(255, 255, 255, 0.589);
 }
 
-#grid-item-2 {
+.grid-item-2 {
     color: white;
     background-color: hsl(217, 19%, 35%);
     grid-area: item2;
@@ -49,11 +49,11 @@ html, body {
     /* height: 260px; */
 }
 
-#grid-item-2 #description-2, #verif_Grad{
+.grid-item-2 .description-2, verif_Grad{
     color: rgba(255, 255, 255, 0.589);
 }
 
-#grid-item-3 {
+.grid-item-3 {
     background-color: #FFFFFF;
     color: black;
     grid-area: item3;
@@ -63,11 +63,11 @@ html, body {
     /* height: 560px; */
 }
 
-#grid-item-3 #description-2, #verif_Grad{
+.grid-item-3 .description-2, verif_Grad{
     color: rgba(0, 0, 0, 0.589);
 }
 
-#grid-item-4 {
+.grid-item-4 {
     background-color: #FFFFFF;
     grid-area: item4;
     box-shadow: 20px 20px 30px rgba(122, 119, 119, 0.445);
@@ -75,11 +75,11 @@ html, body {
     /* height: 260px; */
 }
 
-#grid-item-4 #description-2, #verif_Grad{
+.grid-item-4 .description-2, verif_Grad{
     color: rgba(0, 0, 0, 0.589);
 }
 
-#grid-item-5 {
+.grid-item-5 {
     background-color: hsl(219, 29%, 14%);
     grid-area: item5;
     color: #EDF2F8;
@@ -87,56 +87,69 @@ html, body {
     /* height: 260px; */
 }
 
-#grid-item-5 #description-2, #verif_Grad{
+.grid-item-5 .description-2, verif_Grad{
     color: rgba(255, 255, 255, 0.589);
 }
 
-#peaple {
+.peaple {
     display: flex;
     padding: 15px;
     padding-left: 30px;
     padding-bottom: 10px;
 }
 
-#peaple div {
+.peaple div {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-#peaple img {
+.peaple img {
     border-radius: 100px;
     height: 40px;
     margin-right: 15px;
     border: #cbced157 solid 3px;
 }
 
-#name {
+.name {
     font-weight: bold;
     margin: 1px;
 }
 
-#verif_Grad {
+.verif_Grad {
     margin: 1px;
     font-size: 13px;
 }
 
-#description-1 {
+.description-1 {
     margin-top: 5px;
     font-size: 18px;
     margin: 5px 30px 5px 30px;
 }
 
-#description-2 {
+.description-2 {
     font-size: 13px;
     margin: 20px 30px 20px 30px;
 }
 
 @media (max-width: 1230px) {
-    #grid-container {
+    .grid-container {
+        padding: 20px;
+        grid-template-columns: 280px 280px;
+        grid-template-rows: 280px 280px 280px 280px;
+        grid-template-areas: 
+        'item1 item1'
+        'item2 item4'
+        'item3 item3'
+        'item5 item5';
+    }
+}
+
+@media (max-width: 620px) {
+    .grid-container {
         padding: 20px;
         grid-template-columns: 280px;
-        grid-template-rows: 450px 280px 500px 230px 410px;
+        grid-template-rows: 450px 280px 500px 250px 410px;
         grid-template-areas: 
         'item1'
         'item2'
